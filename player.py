@@ -20,7 +20,7 @@ class Player:
         self.quads = []
         self.kickers = []
         self.hand_class = 0
-        self.get_hand(deck)
+        # self.get_hand(deck)
 
 
     def __repr__(self):
@@ -31,7 +31,7 @@ class Player:
         print(f"Player {self.player_number} hand: {self.hand}")
 
     def seat_new_player(self, table):
-        table.seated_players.append(Player)
+        table.seated_players.append(self)
 
     def deal(self, deck, number_of_cards=2):
         for num in range(number_of_cards):
@@ -56,3 +56,8 @@ class Player:
             while card is None:
                 card = self.get_card(deck)
             self.hand.append(card)
+
+    def predetermined_hand(self, card1, card2, deck):
+        self.hand.append(deck.draw_specific(card1.rank, card1.suit))
+        self.hand.append(deck.draw_specific(card2.rank, card2.suit))
+
