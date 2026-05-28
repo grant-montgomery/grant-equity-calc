@@ -23,8 +23,8 @@ def main():
     player1 = Player(deck, table)
     player2 = Player(deck, table)
     p1card1 = Card("c", 5)
-    p1card2 = Card("c", 6)
-    p2card1 = Card("c", 7)
+    p1card2 = Card("h", 5)
+    p2card1 = Card("c", 9)
     p2card2 = Card("c", 8)
     player1.predetermined_hand(p1card1, p1card2, deck)
     player2.predetermined_hand(p2card1, p2card2, deck)
@@ -37,6 +37,6 @@ def main():
     print(deck)
 
     showdown(player1, player2, table)
-    print(player1.hand_plus_board)
+    straight_checker(player2, table)
 
 main()
