@@ -60,5 +60,23 @@ def straight_checker(player, table):
     except IndexError:
         print("STRAIGHT CHECKER: Index out of range")
 
+def fill_ranks_dict(player):
+    for card in player.hand_plus_board:
+        for key in player.ranks_dict:
+            if card.rank == key:
+                player.ranks_dict[key] += 1
+
+def fill_suits_dict(player):
+    for card in player.hand_plus_board:
+        for key in player.suits_dict:
+            if card.suit == key:
+                player.suits_dict[key] += 1
+
+def fill_suits_and_ranks_dicts(table):
+    for player in table.seated_players:
+        fill_ranks_dict(player)
+        fill_suits_dict(player)
+
+
 
 
