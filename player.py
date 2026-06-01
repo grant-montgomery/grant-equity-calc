@@ -9,6 +9,7 @@ class Player:
         self.hand_plus_board = []
         self.suits_dict = {}
         self.ranks_dict = {}
+        self.hand_without_pairs = []
         self.flush_cards_list = []
         self.ranks_list = []
         self.best_five = []

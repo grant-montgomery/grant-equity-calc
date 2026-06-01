@@ -59,6 +59,12 @@ class Deck:
 
             table.board.append(card)
 
+    def deal_specific_board(self, table): # for testing
+        table.board.append(self.draw_specific(12, "s"))
+        table.board.append(self.draw_specific(12, "d"))
+        table.board.append(self.draw_specific(12, "c"))
+        table.board.append(self.draw_specific(13, "s"))
+        table.board.append(self.draw_specific(2, "s"))
 
 
 
