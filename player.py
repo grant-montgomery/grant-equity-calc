@@ -1,5 +1,5 @@
 # from deck import Deck, Card, Table
-
+SUITS = ["c", "d", "h", "s"]
 class Player:
     def __init__(self, deck, table):
 
@@ -7,8 +7,8 @@ class Player:
         self.hand = []
         self.player_number = len(table.seated_players)
         self.hand_plus_board = []
-        self.suits_dict = {}
-        self.ranks_dict = {}
+        self.suits_dict = {key: 0 for key in SUITS}
+        self.ranks_dict = {key: 0 for key in range(2, 15)}
         self.hand_without_pairs = []
         self.flush_cards_list = []
         self.ranks_list = []
