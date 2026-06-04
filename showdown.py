@@ -1,19 +1,24 @@
 
-def determine_hand_strength(player1, player2, table):
+def determine_hand_strength(player, player2, table):
+    for person in table.seated_players:
+        # prepping properties to make hand comparison easier
+        combine_hand_and_board(person, table)
+        fill_suits_and_ranks_dicts(person, table)
+        remove_pairs(person)
 
-    combine_hand_and_board(player1, table)
+        # determining if player has specific hand classes
+        straight_checker(person, table)
 
 
 
 def combine_hand_and_board(player, table):
     # first combine players' hand and board into hand_plus_board
-    for player in table.seated_players:
 
-        for cards in player.hand:
-            player.hand_plus_board.append(cards)
-        for card in table.board:
-            player.hand_plus_board.append(card)
-        print(f"{player}'s hand combined successfully into {player.hand_plus_board}")
+    for cards in player.hand:
+        player.hand_plus_board.append(cards)
+    for card in table.board:
+        player.hand_plus_board.append(card)
+    print(f"{player}'s hand combined successfully into {player.hand_plus_board}")
 
 
 def remove_pairs(player):
@@ -72,10 +77,10 @@ def fill_suits_dict(player):
             if card.suit == key:
                 player.suits_dict[key] += 1
 
-def fill_suits_and_ranks_dicts(table):
-    for player in table.seated_players:
-        fill_ranks_dict(player)
-        fill_suits_dict(player)
+def fill_suits_and_ranks_dicts(player, table):
+
+    fill_ranks_dict(player)
+    fill_suits_dict(player)
 
 
 
