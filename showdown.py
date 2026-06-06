@@ -1,5 +1,13 @@
+from straights import *
 
 def determine_hand_strength(player, player2, table):
+    """
+    Iterate through table.seated_players and determine hand strength for each player
+    :param player: TOFIX: unused at this point
+    :param player2: TOFIX: unused at this point, maybe remove these two params later
+    :param table: object, table object containing list of players
+    :return:
+    """
     for person in table.seated_players:
         # prepping properties to make hand comparison easier
         combine_hand_and_board(person, table)
@@ -36,34 +44,10 @@ def remove_pairs(player):
             start_point += 1
         except IndexError:
             print("PAIR REMOVER: card index out of range")
+    player.hand_without_pairs.sort(key=lambda card: card.rank)  # sort hand_without_pairs in place
 
 
-def straight_checker(player, table):
-    """
-    Check if player has a straight
-    :param player: player object
-    :param table: table object (for board cards)
-    :return: int, 0 if no straight, otherwise highest straight card
-    """
-    high_card = 0
-    player.hand_without_pairs.sort(key= lambda card : card.rank) # sort hand_plus_board in place
-    print(f"{player} sorted hand = {player.hand_plus_board}")
-    # next step: make player.hand_with_pairs_removed so that straights will show even
-    # if there is a pair within the "straight cards"
-    try:
-        for index in range(0, 3):
-            continuous = True
-            for num in range(1, 5):
-                if continuous:
-                    if player.hand_without_pairs[index].rank != player.hand_without_pairs[index + num].rank - num:
-                        continuous = False
-                    if num == 4 and continuous == True:
-                        player.straight = player.hand_without_pairs[num + index]
-                        high_card = player.hand_without_pairs[num + index].rank
-                        print(f'{player} has a {player.straight} high straight')
-                        print(high_card)
-    except IndexError:
-        print("STRAIGHT CHECKER: Index out of range")
+
 
 def fill_ranks_dict(player):
     for card in player.hand_plus_board:

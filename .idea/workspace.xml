@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="53fb4745-8ed3-4b46-88ad-365d190d4ea4" name="Changes" comment="determine_hand_strength and other showdown have been updated to run thru determine_hand_strength by iterating thru table.seated_players">
+      <change afterPath="$PROJECT_DIR$/.idea/grant-equity-calculator.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flushes.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/quads-trips-pairs.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/straights.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/showdown.py" beforeDir="false" afterPath="$PROJECT_DIR$/showdown.py" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 7,
+  &quot;fromUser&quot;: false
+}</component>
+  <component name="ProjectId" id="3DyRFUncS9AJf9ossrZMnTjuIYc" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "Python.example.executor": "Run",
+    "Python.main.executor": "Run",
+    "Python.player.executor": "Run",
+    "Python.showdown.executor": "Debug",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "codeWithMe.voiceChat.enabledByDefault": "false",
+    "git-widget-placeholder": "quads-with-dict",
+    "last_opened_file_path": "/home/rachel/PycharmProjects/grant-equity-calculator",
+    "settings.editor.selected.configurable": "preferences.editor"
+  }
+}]]></component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-python-sdk-c59985aa861c-c2ffad84badb-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-261.24374.152" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="53fb4745-8ed3-4b46-88ad-365d190d4ea4" name="Changes" comment="" />
+      <created>1779252220714</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1779252220714</updated>
+      <workItem from="1779252222189" duration="1673000" />
+      <workItem from="1779756944140" duration="10679000" />
+      <workItem from="1779986409469" duration="230000" />
+      <workItem from="1780010650687" duration="19396000" />
+      <workItem from="1780286224034" duration="248000" />
+      <workItem from="1780354369056" duration="7974000" />
+      <workItem from="1780416810835" duration="17729000" />
+    </task>
+    <task id="LOCAL-00001" summary="New version of equity calc with separate modules for large classes. Created May 2026">
+      <option name="closed" value="true" />
+      <created>1779252517589</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1779252517589</updated>
+    </task>
+    <task id="LOCAL-00002" summary="added combine_hand_and_board and started on straight_checker functions">
+      <option name="closed" value="true" />
+      <created>1779986559351</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1779986559351</updated>
+    </task>
+    <task id="LOCAL-00003" summary="straight checker now detects straights with the help of the remove_pairs function.">
+      <option name="closed" value="true" />
+      <created>1780286413308</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1780286413308</updated>
+    </task>
+    <task id="LOCAL-00004" summary="determine_hand_strength and other showdown have been updated to run thru determine_hand_strength by iterating thru table.seated_players">
+      <option name="closed" value="true" />
+      <created>1780617308845</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1780617308850</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
+    <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="New version of equity calc with separate modules for large classes. Created May 2026" />
+    <MESSAGE value="added combine_hand_and_board and started on straight_checker functions" />
+    <MESSAGE value="straight checker now detects straights with the help of the remove_pairs function." />
+    <MESSAGE value="determine_hand_strength and other showdown have been updated to run thru determine_hand_strength by iterating thru table.seated_players" />
+    <option name="LAST_COMMIT_MESSAGE" value="determine_hand_strength and other showdown have been updated to run thru determine_hand_strength by iterating thru table.seated_players" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/grant_equity_calculator$showdown.coverage" NAME="showdown Coverage Results" MODIFIED="1779760531062" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/grant_equity_calculator$main.coverage" NAME="main Coverage Results" MODIFIED="1780717759320" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/grant_equity_calculator$example.coverage" NAME="example Coverage Results" MODIFIED="1780185783012" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/grant_equity_calculator$player.coverage" NAME="player Coverage Results" MODIFIED="1779761821221" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+  </component>
+</project>
