@@ -1,4 +1,4 @@
-def straight_checker(player, table):
+def straight_checker(player):
     """
     Check if player has a straight
     :param player: player object
@@ -8,8 +8,7 @@ def straight_checker(player, table):
     high_card = 0
 
     print(f"{player} sorted hand = {player.hand_plus_board}")
-    # next step: make player.hand_with_pairs_removed so that straights will show even
-    # if there is a pair within the "straight cards"
+
     try:
         for index in range(0, 3):
             continuous = True
@@ -22,5 +21,7 @@ def straight_checker(player, table):
                         high_card = player.hand_without_pairs[num + index].rank
                         print(f'{player} has a {player.straight} high straight')
                         print(high_card)
+                        if player.hand_class < 4:
+                            player.hand_class = 4
     except IndexError:
         print("STRAIGHT CHECKER: Index out of range")

@@ -12,15 +12,17 @@ class Player:
         self.hand_without_pairs = []
         self.flush_cards_list = []
         self.ranks_list = []
-        self.best_five = []
+
         self.flush = False
         self.straight = False
         self.straight_flush = 0
         self.pairs = []
         self.trips = []
+        self.full_house = []
         self.quads = []
         self.kickers = []
         self.hand_class = 0
+        self.best_five = []
         # self.get_hand(deck)
 
 
