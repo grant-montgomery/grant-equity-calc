@@ -22,10 +22,10 @@ def main():
     # random.shuffle(deck.cards)
     player1 = Player(deck, table)
     player2 = Player(deck, table)
-    p1card1 = Card("s", 5)
+    p1card1 = Card("s", 14)
     p1card2 = Card("h", 5)
-    p2card1 = Card("c", 9)
-    p2card2 = Card("c", 8)
+    p2card1 = Card("h", 8)
+    p2card2 = Card("s", 9)
     player1.predetermined_hand(p1card1, p1card2, deck)
     player2.predetermined_hand(p2card1, p2card2, deck)
     player1.print_hand()
@@ -37,7 +37,7 @@ def main():
     print(f'{table.seated_players=}')
     print(deck)
 
-    determine_hand_strength(player1, player2, table)
+    determine_hand_strength(table)
     # remove_pairs(player1)
     # remove_pairs(player2)
     # straight_checker(player2, table)
@@ -56,6 +56,6 @@ def main():
     # Print each player's hand strength
     for dude in table.seated_players:
         print(f'{dude}\'s Hand Ranking: {dude.hand_class} -- Best five card hand: {dude.best_five}')
-        print(f"{dude.hand_without_pairs=}")
+        print(f"{dude.full_house=}")
 
 main()

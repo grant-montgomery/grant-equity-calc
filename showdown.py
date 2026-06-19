@@ -2,11 +2,9 @@ from straights import *
 from quads_trips_pairs import *
 from kickers import *
 
-def determine_hand_strength(player, player2, table):
+def determine_hand_strength(table):
     """
     Iterate through table.seated_players and determine hand strength for each player
-    :param player: TOFIX: unused at this point
-    :param player2: TOFIX: unused at this point, maybe remove these two params later
     :param table: object, table object containing list of players
     :return:
     """

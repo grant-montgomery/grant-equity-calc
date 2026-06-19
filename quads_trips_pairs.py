@@ -18,7 +18,7 @@ def quad_checker(player):
             return key
     return None
 
-def full_house_checker(player):  # TOFIX: Needs testing still 6/12
+def full_house_checker(player):
     """
     Check if player has a full house
     :param player: object, holds the player's hand
@@ -27,25 +27,29 @@ def full_house_checker(player):  # TOFIX: Needs testing still 6/12
     trips_value = 0
     pair_value_a = 0
 
-    for key in player.ranks_dict:
+    for key in player.ranks_dict:  # find biggest trips
         if player.ranks_dict[key] == 3 and key > trips_value:
             trips_value = key
             print(f"FH trips value set: {trips_value}")
-    for key in player.ranks_dict:
-        if player.ranks_dict[key] == 2 and key > pair_value_a:
+    for key in player.ranks_dict: # find biggest pair (even if it's within smaller trips)
+        if player.ranks_dict[key] >= 2 and trips_value != key > pair_value_a:
             pair_value_a = key
             print(f"FH pair value set: {pair_value_a}")
     if trips_value > 0 and pair_value_a > 0:
         player.full_house.append(pair_value_a)
         player.full_house.append(trips_value)
         player.hand_class = 6
+        pair_counter = 2
         for card in player.hand_plus_board:
             if card.rank == trips_value:
                 player.best_five.append(card)
-            if card.rank == pair_value_a:
-                player.best_five.append(card)
-        return player.full_house
 
+            if pair_counter > 0:
+                if card.rank == pair_value_a:
+                    player.best_five.append(card)
+                    pair_counter -= 1
+        return player.full_house
+    return None
 
 
 def trips_checker(player):
@@ -66,3 +70,4 @@ def trips_checker(player):
 
             return key
     return None
+
