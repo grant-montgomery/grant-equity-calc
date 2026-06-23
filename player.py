@@ -17,6 +17,7 @@ class Player:
         self.straight = False
         self.straight_flush = 0
         self.pairs = []
+        self.two_pair = []
         self.trips = []
         self.full_house = []
         self.quads = []
