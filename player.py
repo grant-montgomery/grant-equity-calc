@@ -24,6 +24,13 @@ class Player:
         self.kickers = []
         self.hand_class = 0
         self.best_five = []
+        self.kicker1 = 0
+        self.kicker2 = 0
+        self.kicker3 = 0
+        self.kicker4 = 0
+        self.kicker5 = 0
+        self.wins = 0
+        self.equity = 0
         # self.get_hand(deck)
 
 

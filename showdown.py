@@ -48,7 +48,7 @@ def combine_hand_and_board(player, table):
     for card in table.board:
         player.hand_plus_board.append(card)
     player.hand_plus_board.sort(key= lambda card: card.rank)
-    print(f"{player}'s hand combined successfully into {player.hand_plus_board}")
+    # print(f"{player}'s hand combined successfully into {player.hand_plus_board}")
 
 
 def remove_duplicate_cards(player):

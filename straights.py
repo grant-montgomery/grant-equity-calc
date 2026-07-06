@@ -7,7 +7,7 @@ def straight_checker(player):
     """
     high_card = 0
 
-    print(f"{player} sorted hand = {player.hand_plus_board}")
+    # print(f"{player} sorted hand = {player.hand_plus_board}")
 
     try:
         for index in range(0, 3):
@@ -24,13 +24,13 @@ def straight_checker(player):
                             straight_list.append(player.hand_without_pairs[num + index - back_cycler])
 
                         high_card = player.hand_without_pairs[num + index].rank
-                        print(f'{player} has a {player.straight} high straight')
+                        # print(f'{player} has a {player.straight} high straight')
                         print(high_card)
                         if player.hand_class < 4:
                             player.hand_class = 4
                         player.best_five = straight_list
     except IndexError:
-        print("STRAIGHT CHECKER: Index out of range")
+        print("...")
 
 
 def flush_checker(player):
@@ -51,10 +51,11 @@ def flush_checker(player):
             for card in player.hand_plus_board:
                 if card.suit == flush_suit:
                     flush_cards.append(card)
-            for index in reversed(range(len(flush_cards) - 4, len(flush_cards))):
+            for index in reversed(range(len(flush_cards) - 5, len(flush_cards))):
                 player.best_five.append(flush_cards[index]) # find highest five flush cards
             player.best_five.sort(key=lambda card: card.rank)  # sort by rank
             player.flush = player.best_five[4]
-            print(f'{player} has a flush: {player.flush} high')
+            player.hand_class = 5
+            # print(f'{player} has a flush: {player.flush} high')
     except IndexError:
-        print("Index error during flush determination")
+        print("...")

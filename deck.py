@@ -60,18 +60,20 @@ class Deck:
             table.board.append(card)
 
     def deal_specific_board(self, table): # for testing
-        table.board.append(self.draw_specific(12, "d"))
-        table.board.append(self.draw_specific(8, "d"))
-        table.board.append(self.draw_specific(3, "d"))
-        table.board.append(self.draw_specific(4, "c"))
-        table.board.append(self.draw_specific(5, "c"))
+        table.board.append(self.draw_specific(11, "c"))
+        table.board.append(self.draw_specific(10, "h"))
+        table.board.append(self.draw_specific(3, "s"))
+        table.board.append(self.draw_specific(4, "s"))
+        table.board.append(self.draw_specific(5, "s"))
 
 
 
 class Table:
     def __init__(self):
         self.seated_players = []
+        self.tied_players = []
         self.board = []
+        self.skipped_runs = 0
 
 class Card:
     def __init__(self, suit, rank):
