@@ -7,7 +7,7 @@ def quad_checker(player):
     """
     for key in player.ranks_dict:
         if player.ranks_dict[key] == 4:
-            print(f"Quad {key}'s detected for {player}!")
+            # print(f"Quad {key}'s detected for {player}!")
             player.quads = key
             if player.hand_class < 7:
                 player.hand_class = 7
@@ -60,7 +60,7 @@ def trips_checker(player):
     """
     for key in player.ranks_dict:
         if player.ranks_dict[key] == 3:
-            print(f"Trip {key}'s detected for {player}!")
+            # print(f"Trip {key}'s detected for {player}!")
             player.quads = key
             if player.hand_class < 3:
                 player.hand_class = 3
@@ -114,7 +114,9 @@ def pair_checker(player):
     for key in player.ranks_dict:  # Find out if two pair exist, and which two are highest
         if player.ranks_dict[key] == 2:
             pair = key
+            player.pairs.append(key) # for tie breaking purposes
     for card in player.hand_plus_board:
         if card.rank == pair:
             player.best_five.append(card)
             player.hand_class = 1
+    sorted(player.pairs) # sorted for tie breaking
